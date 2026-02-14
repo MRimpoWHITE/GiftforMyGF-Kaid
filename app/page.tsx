@@ -455,6 +455,38 @@ export default function ValentineVN() {
     }
   };
 
+  const PRELOAD_IMAGES = [
+  "/room-bg.png",
+  "/Phu+Sleeping.png",
+  "/Phu+Hurt.png",
+  "/Phu+angry.png",
+  "/Phu+wakeup.png",
+  "/Phu+Hi.png",
+  "/Phu+idle.png",
+  "/Phu+speak.png",
+  "/Phu_figout.png",
+  "/Phu+Thumpup.png",
+  "/Phu+idk.png",
+  "/Phu+ask.png",
+  "/Phu+cheerup.png",
+  "/Phu+smile.png",
+  "/Phu_idle2.png",
+  "/Phu+think.png",
+  "/dog.png",
+  // ... ใส่พวกรูป item/memory ให้ครบด้วยนะครับ
+  "/item/item1.png",
+  "/item/item2.png",
+  "/item/item3.png",
+  "/item/item4.png",
+  "/item/item5.1.png",
+  "/item/item5.22.png",
+  "/item/item5.2.png",
+  "/item/item5.3.png",
+  "/item/item5.4.png",
+  "/item/item5.5.png",
+  "/item/item6.png",
+];
+
   return (
     <main className={`relative w-screen h-screen overflow-hidden font-sans transition-colors duration-1000 ${isEnding ? "bg-black" : "bg-gray-900"}`}>
 
@@ -614,7 +646,19 @@ export default function ValentineVN() {
           </div>
         </div>
       )}
-
+      <div className="hidden">
+        {PRELOAD_IMAGES.map((src, index) => (
+          <Image 
+            key={index}
+            src={src} 
+            alt="preload" 
+            width={1} 
+            height={1} 
+            priority // สั่งให้โหลดทันที!
+            unoptimized // ให้โหลดไฟล์ต้นฉบับมารอ
+          />
+        ))}
+      </div>
     </main>
   );
 }
