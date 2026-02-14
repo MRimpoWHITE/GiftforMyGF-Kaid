@@ -45,9 +45,9 @@ type Scene = {
 const story: Record<string, Scene> = {
   // ... (ฉาก start - mood_soso เหมือนเดิม) ...
   start: {
-    speaker: "Kaid (เกด)",
+    speaker: "Kait (เกด)",
     introSteps: [
-      { text: "......", image: "", speaker: "Kaid (เกด)" },
+      { text: "......", image: "", speaker: "Kait (เกด)" },
       { text: "ครอกฟี้... Zzz...", image: "/Phu+Sleeping.png", speaker: "Phu (ภู)" },
     ],
     text: "(ภูกำลังหลับ... เอาไงดี?)",
@@ -83,7 +83,7 @@ const story: Record<string, Scene> = {
   location_reveal: {
     speaker: "Phu (ภู)",
     introSteps: [
-      { text: "อย่าบอกนะว่าเอาเค้ากลับมาที่เกทลิน?", image: "Phu+idle.png", speaker: "Kaid (เกด)" },
+      { text: "อย่าบอกนะว่าเอาเค้ากลับมาที่เกทลิน?", image: "Phu+idle.png", speaker: "Kait (เกด)" },
       { text: "ช่ายยย ที่นี่มีความทรงจำเยอะ แล้วก็เป็นที่ที่เค้าเจอเทอด้วยไง... ", image: "/Phu+speak.png", speaker: "Phu (ภู)" },
       { text: "หวังว่าจะไม่เป็นอะไรนะ?", image: "/Phu_figout.png", speaker: "Phu (ภู)" },
     ],
@@ -97,7 +97,7 @@ const story: Record<string, Scene> = {
   reply_pen_si: {
     speaker: "Phu (ภู)",
     introSteps: [
-      { text: "แล้วจะกลับบ้านไงเนี่ย!", image: "Phu+idle.png", speaker: "Kaid (เกด)" },
+      { text: "แล้วจะกลับบ้านไงเนี่ย!", image: "Phu+idle.png", speaker: "Kait (เกด)" },
     ],
     text: "หน่าๆ เรื่องนั้นค่อยคิดแล้วกันน่าา... อยู่ด้วยกันก่อน",
     character: "/Phu+Thumpup.png",
