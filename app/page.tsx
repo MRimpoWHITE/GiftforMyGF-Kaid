@@ -9,7 +9,7 @@ type Choice = {
   text: string;
   nextScene: string;
   isRunaway?: boolean;
-  response?: string; // ✅ เพิ่ม: ข้อความที่จะขึ้นหลังจากกดเลือก
+  response?: string;
 };
 
 type IntroStep = {
@@ -43,7 +43,6 @@ type Scene = {
 
 // --- Story Configuration ---
 const story: Record<string, Scene> = {
-  // ... (ฉาก start - mood_soso เหมือนเดิม) ...
   start: {
     speaker: "Kait (เกด)",
     introSteps: [
@@ -143,7 +142,7 @@ const story: Record<string, Scene> = {
   },
 
 
-  // --- 6. Gallery Mode ---
+  // --- Gallery Mode ---
   memory_gallery: {
     isGallery: true,
     speaker: "Phu (ภู)",
@@ -200,7 +199,7 @@ const story: Record<string, Scene> = {
         text: "ทุกคนจะคิดถึงเค้าบ้างไหมนะ... ",
         choices: [{ text: "(ไปต่อ)", nextScene: "" }]
       },
-      // ✅✅✅ Item 4 ที่คุณต้องการ (ใส่ response ใน choices) ✅✅✅
+
       {
         id: "item4",
         x: 53, y: 23,
@@ -216,12 +215,12 @@ const story: Record<string, Scene> = {
         choices: [
           {
             text: "จ้า",
-            response: "จริงๆมันมีข้อความลับๆอยู่นะ แต่อย่าไปแกะหามันนะ เดียวถึงเวลาเค้าจะบอกเอง", // 👈 ใส่ข้อความตอบกลับ
+            response: "จริงๆมันมีข้อความลับๆอยู่นะ แต่อย่าไปแกะหามันนะ เดียวถึงเวลาเค้าจะบอกเอง", 
             nextScene: ""
           },
           {
             text: "ชอบสิ...",
-            response: "🫶 จริงๆมันมีข้อความลับๆอยู่นะ แต่อย่าไปแกะหามันนะ เดียวถึงเวลาเค้าจะบอกเอง", // 👈 ใส่ข้อความตอบกลับ
+            response: "🫶 จริงๆมันมีข้อความลับๆอยู่นะ แต่อย่าไปแกะหามันนะ เดียวถึงเวลาเค้าจะบอกเอง", 
             nextScene: ""
           }
         ]
@@ -230,47 +229,47 @@ const story: Record<string, Scene> = {
         id: "item5",
         x: 30, y: 20,
         icon: "✈️",
-        memoryImage: "/item/item6.1.png", // รูปหลัก (เผื่อประโยคไหนไม่มีรูป)
+        memoryImage: "/item/item6.1.png", 
         introSteps: [
           {
             text: "ตั๋วเครื่องบินครั้งแรกที่ไปหา นานแล้วเมื่อกันแหะ",
             image: "Phu+think.png",
-            memoryImage: "/item/item5.1.png" // 👈 รูปที่ 1
+            memoryImage: "/item/item5.1.png" 
           },
           {
             text: "ตอนนั้นเทอทำหน้าเหวอมากตอนเจอกันครั้งแรก ",
             image: "Phu+wakeup.png",
-            memoryImage: "/item/item5.22.png" // 👈 รูปที่ 2 (เปลี่ยนแล้ว!)
+            memoryImage: "/item/item5.22.png" 
           },
           {
             text: "เดทแรกในไทย... ",
             image: "",
-            memoryImage: "/item/item5.2.png" // 👈 รูปที่ 3
+            memoryImage: "/item/item5.2.png" 
           },
           {
             text: "แฮงเอ้าแรกในไทยด้วยกัน... ไยบะสนุกกก ",
             image: "Phu+ask.png",
-            memoryImage: "/item/item5.3.png" // 👈 รูปที่ 3
+            memoryImage: "/item/item5.3.png" 
           },
           {
             text: "แต่ตอนนั้นทำเทอโกรธครั้งแรกทีไทยด้วย555 ยังรู้สึกผิดอยู่เลย.... ",
             image: "Phu_figout.png",
-            memoryImage: "/item/item5.3.png" // 👈 รูปที่ 3
+            memoryImage: "/item/item5.3.png" 
           },
           {
             text: "ไว้ให้เค้าแก้ตัวนะะะ... ",
             image: "Phu+smile.png",
-            memoryImage: "/item/item5.3.png" // 👈 รูปที่ 3
+            memoryImage: "/item/item5.3.png" 
           },
           {
             text: "ช่วงเวลาที่ได้อยู่กับเทอ คือช่วงเวลาที่ดีทีสุดเลยนะ... ",
             image: "",
-            memoryImage: "/item/item5.4.png" // 👈 รูปที่ 3
+            memoryImage: "/item/item5.4.png" 
           },
           {
             text: "การที่เราอยู่ไกลกัน มันทำให้เค้าทั้งชอบและไม่ชอบสถานที่นี้เลย... ",
             image: "Phu+angry.png",
-            memoryImage: "/item/item5.5.png" // 👈 รูปที่ 3
+            memoryImage: "/item/item5.5.png"
           }
         ],
         text: "ไว้มาสร้างช่วงเวลาดีๆด้วยกันอีกนะที่รัก",
@@ -285,12 +284,11 @@ const story: Record<string, Scene> = {
     ],
   },
 
-  // ✅✅✅ เพิ่มฉาก: ภูกลายเป็นหมา ✅✅✅
   dog_scene: {
     speaker: "Phu (ภู)",
     introSteps: [
       { text: "ม่ายยยยยยยยย!!! 😱", image: "Phu+Sleeping.png" },
-      { text: "ปุ้ง!!! (กลายเป็นหมา)", image: "/dog.png" }, // 👈 อย่าลืมหารูปหมามาใส่ ชื่อ dog.png นะครับ
+      { text: "ปุ้ง!!! (กลายเป็นหมา)", image: "/dog.png" }, 
       { text: "โฮ่ง! บรู๊วววววว! 🐶 (แปล: อย่าเบื่อเค้าเลยนะ)", image: "/dog.png" },
       { text: "ปิ๊ง! (กลับร่างเดิม)", image: "/Phu+cheerup.png" }
     ],
@@ -328,13 +326,11 @@ export default function ValentineVN() {
 
   const [activeMemory, setActiveMemory] = useState<MemoryItem | null>(null);
 
-  // ✅ State ใหม่: เก็บข้อความตอบกลับ และ Scene ถัดไปที่รออยู่
   const [responseText, setResponseText] = useState<string | null>(null);
   const [pendingNextScene, setPendingNextScene] = useState<string | null>(null);
 
   const currentScene: Scene = story[currentSceneKey] || story["start"];
-  const isEnding = currentSceneKey === "ending"; // เช็คว่าเป็นฉากจบไหม
-
+  const isEnding = currentSceneKey === "ending"; 
   // Logic เลือก Step ปัจจุบัน
   const currentStep = activeMemory
     ? (isIntro ? activeMemory.introSteps[introIndex] : null)
@@ -360,7 +356,6 @@ export default function ValentineVN() {
 
   const activeSpeaker = currentStep?.speaker || currentScene.speaker || "Phu (ภู)";
 
-  // ✅ คำนวณ Text ที่จะแสดง (รวมถึง Response Text ด้วย)
   let targetText = "";
   if (responseText) {
     targetText = responseText;
@@ -387,7 +382,6 @@ export default function ValentineVN() {
   }, [targetText]);
 
   const handleNextDialogue = () => {
-    // ✅ ถ้าแสดง Response อยู่ ให้กดแล้วไปต่อ
     if (responseText) {
       setResponseText(null);
       changeScene(pendingNextScene || "");
@@ -473,7 +467,6 @@ export default function ValentineVN() {
   "/Phu_idle2.png",
   "/Phu+think.png",
   "/dog.png",
-  // ... ใส่พวกรูป item/memory ให้ครบด้วยนะครับ
   "/item/item1.png",
   "/item/item2.png",
   "/item/item3.png",
@@ -579,10 +572,10 @@ export default function ValentineVN() {
         </div>
       )}
 
-      {/* 6. MAIN DIALOGUE BOX (ฉากปกติ) vs ENDING TEXT (ฉากจบ) */}
+      {/* 6. MAIN DIALOGUE BOX ENDING  */}
 
       {isEnding ? (
-        // --- ส่วนแสดงผลฉากจบ (จอดำ ตัวหนังสือกลางจอ) ---
+
         <div
           onClick={handleNextDialogue}
           className="absolute inset-0 flex items-center justify-center p-8 cursor-pointer z-50"
@@ -600,7 +593,7 @@ export default function ValentineVN() {
           </motion.div>
         </div>
       ) : (
-        // --- ส่วนแสดงผลปกติ (กล่องข้อความ) ---
+        
         <div className="absolute bottom-0 left-0 right-0 z-30 p-4 md:p-8 flex justify-center">
           <div
             onClick={isIntro || responseText ? handleNextDialogue : undefined}
@@ -654,8 +647,8 @@ export default function ValentineVN() {
             alt="preload" 
             width={1} 
             height={1} 
-            priority // สั่งให้โหลดทันที!
-            unoptimized // ให้โหลดไฟล์ต้นฉบับมารอ
+            priority
+            unoptimized
           />
         ))}
       </div>
